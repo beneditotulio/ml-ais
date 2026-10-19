@@ -24,6 +24,8 @@ streamlit run app.py
 
 O treino apresenta MAE e R² no terminal e guarda `modelo_eta_nacala.pkl` na pasta do projeto. O Streamlit abre a interface no navegador; por omissão, o endereço local é `http://localhost:8501`.
 
+Na tela de ETA, escolha um navio na lista ou use os botões Anterior/Seguinte. A pré-visualização mostra os valores e a posição do último registo AIS completo guardado no Excel; esses dados são uma amostra local e não representam acompanhamento AIS em tempo real. Os campos podem ser ajustados antes de calcular a ETA.
+
 ## Dados utilizados
 
 O treino lê a folha `Dados_AIS` do Excel local. Utiliza `dist_to_nacala_nm`, `sog_kn`, `cog_deg`, `heading_deg`, `dist_travelled_nm` e `total_route_nm` para prever `hours_to_arrival`. Registos sem valores válidos nestas colunas são excluídos.
